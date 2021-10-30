@@ -51,6 +51,13 @@ SimObject('MipsSeWorkload.py', sim_objects=['MipsSEWorkload', 'MipsEmuLinux'],
     tags='mips isa')
 SimObject('MipsTLB.py', sim_objects=['MipsTLB'], tags='mips isa')
 
+SimObject('MipsCPU.py', tags='mips isa')
+if env['TARGET_ISA'] == 'mips':
+    SimObject('AtomicSimpleCPU.py', tags='mips isa')
+    SimObject('TimingSimpleCPU.py', tags='mips isa')
+    SimObject('NonCachingSimpleCPU.py', tags='mips isa')
+    SimObject('O3CPU.py', tags='mips isa')
+
 DebugFlag('MipsPRA', tags='mips isa')
 
 ISADesc('isa/main.isa', tags='mips isa')
