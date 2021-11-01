@@ -45,3 +45,8 @@ DebugFlag('SimpleCPU')
 
 Source('base.cc')
 SimObject('BaseSimpleCPU.py', sim_objects=['BaseSimpleCPU'])
+
+# For backwards compatibility
+SimObject('AtomicSimpleCPU.py')
+SimObject('NonCachingSimpleCPU.py')
+SimObject('TimingSimpleCPU.py')
